@@ -19,10 +19,10 @@
     <div class="container">
       <div class="weather-app">
         <div class="description">
-          <h1>Johannesburg</h1>
+          <h1 id="city"></span></h1>
           <ul>
             <li>Saturday 21:35</li>
-            <li>Clear with periodic clouds</li>
+            <li id="description"></li>
           </ul>
         </div>
         <div class="row">
@@ -34,16 +34,15 @@
                 class="float-left"
               />
               <div class="float-left">
-                <strong>12</strong>
+                <strong id="temperature"></strong>
                 <span class="units">℃ | <a href="#">℉</a></span>
               </div>
             </div>
           </div>
           <div class="col-6">
             <ul>
-              <li>Precipitation: 0%</li>
-              <li>Humidity: 25%</li>
-              <li>Wind: 16 km/h</li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
             </ul>
           </div>
         </div>

@@ -23,6 +23,10 @@ li {
   line-height: 18px;
 }
 
+li:first-letter {
+  text-transform: capitalize;
+}
+
 a {
   text-decoration: none;
 }
