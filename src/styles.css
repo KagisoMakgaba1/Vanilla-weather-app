@@ -35,12 +35,14 @@ small {
   color: #70757a;
 }
 
-.weather-app {
+.container {
   max-width: 600px;
   margin: 25px auto;
-  padding: 20px;
+  padding: 25px;
   border: 1px solid #dadde1;
-  border-radius: 5px;
+  border-radius: 10px;
+  background-color: #cedce7;
+  display: block;
 }
 
 .description {
@@ -70,4 +72,9 @@ small {
   margin-top: 4px;
   padding-left: 4px;
   vertical-align: top;
+}
+
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
 }
