@@ -21,7 +21,7 @@ ul {
 }
 
 li {
-  color: #70757a;
+  color: #65696d;
   list-style: none;
   font-size: 15px;
   font-weight: 100;
@@ -37,17 +37,24 @@ a {
 }
 
 small {
-  color: #70757a;
+  color: #65696d;
 }
 
 .container {
   max-width: 600px;
   margin: 25px auto;
   padding: 25px;
-  border: 1px solid #dadde1;
+  border: 1px solid #909396;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.3);
   display: block;
+}
+
+.weather-app input {
+background-color: rgba(194, 187, 187, 0.822);
+font-size: 18px;
+color: #5f6366;
+border: 1px solid #909396;
 }
 
 .description {
@@ -82,4 +89,19 @@ small {
 .weather-temperature .active {
   color: rgb(33, 33, 33);
   cursor: default;
+}
+
+.weather-forecast {
+  margin-top: 25px;
+  text-align: center;
+  color: #2f2f31;
+}
+
+.forecast-date {
+  font-size: 19px;
+opacity: 0.9;
+}
+
+.min-temp {
+color: rgb(221, 13, 41);
 }
