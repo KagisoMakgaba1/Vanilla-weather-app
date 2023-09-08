@@ -26,7 +26,8 @@ function currentDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function showForecast() {
+function showForecast(response) {
+  console.log(response.data.daily);
   let forecast = document.querySelector("#forecast");
 
   let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
@@ -53,7 +54,14 @@ function showForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecast.innerHTML = forecastHTML;
-  console.log(forecastHTML);
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "f606a147394d27601839ffd5343624ee";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(showForecast);
 }
 
 function displayTemperature(response) {
@@ -79,6 +87,8 @@ function displayTemperature(response) {
   );
 
   icon.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function enterCity(city) {
@@ -126,4 +136,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 enterCity("Johannesburg");
-showForecast();
